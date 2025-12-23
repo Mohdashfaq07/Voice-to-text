@@ -72,7 +72,6 @@ DEEPGRAM_API_KEY=your_api_key_here
 npm run tauri dev
 
 ---
-
 Demo video link: (add YouTube / Drive link here)
 
 
