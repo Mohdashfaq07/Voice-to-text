@@ -65,20 +65,20 @@ async fn audio(data: Vec<i16>, state: State<'_, WsState>) -> Result<(), String> 
         return Ok(());
     }
 
-    // 1️⃣ Take sender OUT (no await while locked)
+    //  Take sender OUT (no await while locked)
     let mut sender = {
         let mut guard = state.sender.lock().unwrap();
         guard.take()
     };
 
-    // 2️⃣ Await safely
+    //  Await safely
     if let Some(ref mut ws) = sender {
         let _ = ws
             .send(Message::Binary(bytemuck::cast_slice(&data).to_vec()))
             .await;
     }
 
-    // 3️⃣ Put it back
+    //  Put it back
     *state.sender.lock().unwrap() = sender;
 
     Ok(())
