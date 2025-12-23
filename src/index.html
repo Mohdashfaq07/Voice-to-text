@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Wispr Flow</title>
+  <style>
+    body {
+      font-family: system-ui;
+      padding: 20px;
+    }
+
+    #box {
+      border: 1px solid #ddd;
+      padding: 15px;
+      min-height: 120px;
+      font-size: 18px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    #partial {
+      color: #888;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background: black;
+      margin-left: 2px;
+      animation: blink 1s infinite;
+      vertical-align: bottom;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+
+  <div id="box">
+    <span id="final"></span>
+    <span id="partial"></span>
+    <span class="cursor"></span>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
