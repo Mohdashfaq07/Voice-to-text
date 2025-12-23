@@ -49,7 +49,7 @@ UI (Partial → Final)
 - Rust (stable)
 - Tauri CLI
 
-'''bash
+```bash
 npm install -g @tauri-apps/cli
 
  ### 2. Clone & Install
@@ -62,13 +62,13 @@ npm install -g @tauri-apps/cli
 
 Create a .env file or set environment variable:
 
-'''bash
+```bash
 DEEPGRAM_API_KEY=your_api_key_here
 
 
 ### 4.Run the App
 
-'''bash
+```bash
 npm run tauri dev
 
 ---
